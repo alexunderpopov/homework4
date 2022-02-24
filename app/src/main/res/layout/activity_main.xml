@@ -1,18 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:inputType="number"
+        android:textSize="@dimen/edit_text_size"
+        android:background="@color/text_bk2"
+        android:autofillHints="number"
+        tools:ignore="LabelFor">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear"
+            android:text="@string/c"
+            style="@style/ProcButtonStyle"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/div"
+            android:text="@string/division"
+            style="@style/ProcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mul"
+            android:text="@string/multiply"
+            style="@style/ProcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete"
+            android:text="@string/clear"
+            style="@style/ProcButtonStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num7"
+            android:text="@string/_7"
+            style="@style/CalcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num8"
+            android:text="@string/_8"
+            style="@style/CalcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num9"
+            android:text="@string/_9"
+            style="@style/CalcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sub"
+            android:text="@string/minus"
+            style="@style/ProcButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num6"
+            android:text="@string/_6"
+            style="@style/CalcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num5"
+            android:text="@string/_5"
+            style="@style/CalcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num4"
+            android:text="@string/_4"
+            style="@style/CalcButtonStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add"
+            android:text="@string/plus"
+            style="@style/ProcButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/num1"
+                    android:text="@string/_1"
+                    style="@style/CalcButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/num2"
+                    android:text="@string/_2"
+                    style="@style/CalcButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/num3"
+                    android:text="@string/_3"
+                    style="@style/CalcButtonStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/num0"
+                    android:text="@string/_0"
+                    android:layout_width="140dp"
+                    style="@style/CalcButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/point"
+                    android:text="@string/dot"
+                    style="@style/CalcButtonStyle" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/equal"
+                android:layout_height="140dp"
+                android:text="@string/equal"
+                style="@style/ProcButtonStyle" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
